@@ -1,40 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Next.js Static Site Generator Template
+
+A minimalist, ready-to-use template for creating static websites using Next.js. This template provides a clean starting point for projects that need to be exported as static HTML/CSS/JS, perfect for deployment on any static hosting service.
+
+## Technologies
+
+- **Next.js** - React framework configured for static site generation
+- **Tailwind CSS** - Utility-first CSS framework
+- **ESLint** - Code linting for identifying problematic patterns
+- **Prettier** - Code formatting for consistent style
+
+## Purpose
+
+This template addresses the need for a simple, no-frills starting point for static websites built with modern tooling. It removes the complexity of server-side rendering and API routes, focusing solely on generating static assets that can be deployed anywhere.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 14.6.0 or newer
+- npm
+
+### Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/nextjs-static-site-template.git my-project
+   cd my-project
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## Usage
+
+### Development
+
+Edit files in the `pages` directory to create new pages. The file structure corresponds to the URL structure of your site.
+
+For example:
+- `pages/index.js` → `/`
+- `pages/about.js` → `/about`
+- `pages/blog/[slug].js` → `/blog/:slug`
+
+### Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build the static site (outputs to the `out` directory)
+- `npm run serve` - Serve the built static site locally
+- `npm run lint` - Run ESLint to check for code issues
+
+### Building for Production
+
+To generate the static site for production:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The static files will be generated in the `out` directory and are ready to be deployed to any static hosting service like GitHub Pages, Netlify, Vercel, or AWS S3.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Customization
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Styling
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+This template uses Tailwind CSS. Customize your design by editing:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `tailwind.config.js` - For theme customization
+- `styles/globals.css` - For global styles
 
-## Learn More
+### Configuration
 
-To learn more about Next.js, take a look at the following resources:
+The Next.js configuration is in `next.config.mjs`. Key settings:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+- `output: 'export'` - Enables static site generation
+- `images: { unoptimized: true }` - Required for static export
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+[MIT](LICENSE) (or specify your preferred license)

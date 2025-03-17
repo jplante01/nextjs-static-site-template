@@ -1,58 +1,6 @@
 import PortfolioCard from './PortfolioCard';
 
-const PortfolioGrid = () => {
-  // Sample portfolio items data
-  const portfolioItems = [
-    {
-      id: 1,
-      image: '/api/placeholder/600/400',
-      title: 'Project Name',
-      description: 'Short description of the project. Just a couple of sentences to give context.',
-      tags: ['HTML', 'CSS', 'JavaScript'],
-      link: '#',
-    },
-    {
-      id: 2,
-      image: '/api/placeholder/600/400',
-      title: 'Project Name',
-      description: 'Short description of the project. Just a couple of sentences to give context.',
-      tags: ['React', 'Tailwind', 'Firebase'],
-      link: '#',
-    },
-    {
-      id: 3,
-      image: '/api/placeholder/600/400',
-      title: 'Project Name',
-      description: 'Short description of the project. Just a couple of sentences to give context.',
-      tags: ['Node.js', 'Express', 'MongoDB'],
-      link: '#',
-    },
-    {
-      id: 4,
-      image: '/api/placeholder/600/400',
-      title: 'Project Name',
-      description: 'Short description of the project. Just a couple of sentences to give context.',
-      tags: ['Vue', 'Vuex', 'SCSS'],
-      link: '#',
-    },
-    {
-      id: 5,
-      image: '/api/placeholder/600/400',
-      title: 'Project Name',
-      description: 'Short description of the project. Just a couple of sentences to give context.',
-      tags: ['TypeScript', 'Next.js', 'Vercel'],
-      link: '#',
-    },
-    {
-      id: 6,
-      image: '/api/placeholder/600/400',
-      title: 'Project Name',
-      description: 'Short description of the project. Just a couple of sentences to give context.',
-      tags: ['WordPress', 'PHP', 'MySQL'],
-      link: '#',
-    },
-  ];
-
+const PortfolioGrid = ({ portfolioItems }) => {
   return (
     <section className="py-16 px-6">
       <div className="container mx-auto">
@@ -74,5 +22,6 @@ const PortfolioGrid = () => {
     </section>
   );
 };
+
 
 export default PortfolioGrid;
